@@ -272,6 +272,10 @@ ol li:before {
     font-weight: 700;
 }
 
+table {
+    width: 100%;
+}
+
 /*--------------------*/
 /* Media Query        */
 /*--------------------*/
