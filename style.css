@@ -228,6 +228,11 @@ body {
 /*--------------------*/
 
 /* custom table */
+
+.custom-table {
+    border-collapse: collapse;
+}
+
 .custom-table  tr:not(:last-child) td {
     border-bottom: 1px solid hsl(var(--clr-light-grey));
     padding-bottom: 0.5em;
