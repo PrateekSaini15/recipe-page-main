@@ -272,3 +272,32 @@ ol li:before {
     font-weight: 700;
 }
 
+/*--------------------*/
+/* Media Query        */
+/*--------------------*/
+
+@media (min-width: 1440px) {
+    body {
+        background-color: hsl(var(--clr-eggshell));
+    }
+
+    main {
+        background-color: hsl(var(--clr-white));
+        max-width: 1000px;
+        margin: 4em auto;
+        border-radius: 10px;
+        padding: 4em;
+    }
+
+    img {
+        margin-inline: auto;
+        border-radius: 10px;
+    }
+    .container {
+        max-width: 1440px;
+        margin-inline: auto;
+    }
+}
+
+
+
