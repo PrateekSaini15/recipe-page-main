@@ -1,0 +1,269 @@
+/*--------------------*/
+/* fonts              */
+/*--------------------*/
+@font-face {
+    font-family: "Outfit";
+    src: url(assets/fonts/outfit/static/Outfit-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(assets/fonts/outfit/static/Outfit-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "YoungSerif";
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+
+/*--------------------*/
+/* Custom Properties  */
+/*--------------------*/
+
+:root {
+    /* colors */
+    --clr-nutmeg: 14 45% 36%;
+    --clr-dark-raspberry: 332 51% 32%;
+    --clr-white: 0 0% 100%;
+    --clr-rose-white: 330 100% 98%;
+    --clr-eggshell: 30 54% 90%;
+    --clr-light-grey: 30 18% 87%;
+    --clr-wenge-brown: 30 10% 34%;
+    --clr-dark-charcoal: 24 5% 18%;
+
+    /* font-sizes */
+    --fs-400: 1rem;
+
+    /* font-families */
+    --ff-outfit: "Outfit";
+    --ff-serif: "YoungSerif"
+}
+
+/*--------------------*/
+/* Reset              */
+/*--------------------*/
+
+/* box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset margin */
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+img {
+    margin: 0;
+}
+
+/* images */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* setup body */
+body {
+    font-family: var(--ff-outfit);
+    font-size: var(--fs-400);
+}
+
+/*--------------------*/
+/* Utility Classes    */
+/*--------------------*/
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.container {
+    max-width: 300px;
+    margin-inline: auto;
+    padding-bottom: 2em;
+}
+
+/* spacing */
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mt-3 {
+    margin-top: 3em;
+}
+
+.mt-4 {
+    margin-top: 4em;
+}
+
+.mt-5 {
+    margin-top: 5em;
+}
+
+.p-1 {
+    padding: 1em;
+}
+
+.ps-1 {
+    padding-left: 1em;
+}
+
+.ps-2 {
+    padding-left: 2em;
+}
+
+/* colors */
+
+.bg-nutmeg {
+    background-color: hsl(var(--clr-nutmeg));
+}
+
+.text-nutmeg {
+    color: hsl(var(--clr-nutmeg));
+}
+
+.bg-dark-raspberry {
+    background-color: hsl(var(--clr-dark-raspberry));
+}
+
+.text-dark-raspberry {
+    color: hsl(var(--clr-dark-raspberry));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.bg-rose-white {
+    background-color: hsl(var(--clr-rose-white));
+}
+
+.text-rose-white {
+    color: hsl(var(--clr-rose-white))
+}
+
+.bg-eggshell {
+    background-color: hsl(var(--clr-eggshell));
+}
+
+.text-eggshell {
+    color: hsl(var(--clr-eggshell));
+}
+
+.bg-light-grey {
+    background-color: hsl(var(--clr-light-grey));
+}
+
+.text-light-grey {
+    color: hsl(var(--clr-ligt-grey));
+}
+
+.bg-wenge-brown {
+    background-color: hsl(var(--clr-wenge-brown));
+}
+
+.text-wenge-brown {
+    color: hsl(var(--clr-wenge-brown));
+}
+
+.bg-dark-charcoal {
+    background-color: hsl(var(--clr-dark-charcoal));
+}
+
+.text-dark-charcoal {
+    color: hsl(var(--clr-dark-charcoal));
+}
+
+.box {
+    padding: 1em;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* typography */
+
+.ff-serif {
+    font-family: var(--ff-serif);
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+/*--------------------*/
+/* Components         */
+/*--------------------*/
+
+/* custom table */
+.custom-table  tr:not(:last-child) td {
+    border-bottom: 1px solid hsl(var(--clr-light-grey));
+    padding-bottom: 0.5em;
+}
+
+/* divider */
+.divider {
+    border-bottom: 1px solid hsl(var(--clr-light-grey));
+}
+
+/* highlight section */
+.highlight-section {
+    padding: 1.5em;
+    border-radius: 1em;
+    background-color: hsl(var(--clr-rose-white))
+}
+
+/*--------------------*/
+/* Miscellaneous      */
+/*--------------------*/
+
+ol {
+    list-style: none;
+    counter-reset: item;
+}
+
+ol li {
+    position: relative;
+    counter-increment: item;
+}
+
+ol li:before {
+    position: absolute;
+    left: -30px;
+    content: counter(item) ". ";
+    color:  hsl(var(--clr-nutmeg));
+    font-weight: 700;
+}
+
