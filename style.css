@@ -233,6 +233,10 @@ body {
     border-collapse: collapse;
 }
 
+.custom-table td {
+    padding-top: 1em;
+}
+
 .custom-table  tr:not(:last-child) td {
     border-bottom: 1px solid hsl(var(--clr-light-grey));
     padding-bottom: 0.5em;
